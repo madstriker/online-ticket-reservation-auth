@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+apply from: 'buildSystem/dependency.gradle'
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile(testDependencies.jUnit)
+    implementation(generalDependencies.springWebStarter)
+    implementation(generalDependencies.springDataJpa)
+    implementation(generalDependencies.springSecurityOauth2Autoconfigure)
+    implementation(generalDependencies.hibernateCore)
+    implementation(runtimeDependencies.mysql)
+    compileOnly(generalDependencies.lombok)
+    annotationProcessor generalDependencies.lombok
+}

@@ -1,0 +1,21 @@
+ext{
+
+    generalDependencies  = [
+            springWebStarter                    : "org.springframework.boot:spring-boot-starter-web:$springBootVersion",
+            springDataJpa                       : "org.springframework.boot:spring-boot-starter-data-jpa:$springBootVersion",
+            hibernateCore                       : "org.hibernate:hibernate-core:$hibernateCoreSupportVersion",
+            lombok                              : "org.projectlombok:lombok:$lombokSupportVersion",
+            springSecurityOauth2Autoconfigure   : "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$oauth2Autoconfigure",
+
+    ]
+
+    runtimeDependencies = [
+            mysql      :"mysql:mysql-connector-java:$mySqlConnectorSupporttVersion",
+
+    ]
+
+    testDependencies =[
+            jUnit      : "junit:junit:$jUnitSupportVersion"
+    ]
+
+}
